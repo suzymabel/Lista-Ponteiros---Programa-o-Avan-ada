@@ -1,0 +1,10 @@
+Questão 03 - Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
+	
+p = i; - Ilegal.
+q = &j; - Legal.
+p = &*&i; - Legal.	
+i = (*&)j; - Ilegal.
+i = *&j; - Legal.
+i = *&*&j; - Legal.
+q = *p; - Ilegal.
+i = (*p)++ + *q; - Legal
