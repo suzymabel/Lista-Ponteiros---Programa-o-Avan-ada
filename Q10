@@ -1,0 +1,53 @@
+Questão 10 - . Implemente um programa de computador para testar estas suposições e compare as respostas oferecidas pelo programa com as respostas que você idealizou. 
+
+◦ x for declarado como char?
+Resposta: x+1 = 4093; x+2 = 4094; x+3= 4095.
+
+int main(void) {
+  char x[4];
+  for(int i=0; i<4; i++){
+   printf("\n%x", x+i);
+  }
+}
+//x+1 = 29bf1ea9
+//x+2 = 29bf1eaa
+//x+3 = 29bf1eab
+
+◦ x for declarado como int? 
+Resposta: x+1 = 4094; x+2 = 4096; x+3= 4098.
+
+int main(void) {
+  int x[4];
+  for(int i=0; i<4; i++){
+   printf("\n%x", x+i);
+  }
+}
+//x+1 = f222b5d4
+//x+2 = f222b5d8
+//x+3 = f222b5dc
+	
+◦ x for declarado como float? 
+Resposta: x+1 = 4096; x+2 = 409A; x+3= 409E.
+
+int main(void) {
+  float x[4];
+  for(int i=0; i<4; i++){
+   printf("\n%x", x+i);
+  }
+}
+//x+1 = ba3b4474
+//x+2 = ba3b4478
+//x+3 = ba3b447c
+
+◦ x for declarado como double?
+Resposta: x+1 = 409A; x+2 = 40A2; x+3= 40AA.
+
+int main(void) {
+  double x[4];
+  for(int i=0; i<4; i++){
+   printf("\n%x", x+i);
+  }
+}
+//x+1 = a5ee8028
+//x+2 = a5ee8030
+//x+3 = a5ee8038
