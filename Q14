@@ -1,0 +1,33 @@
+Questão 14 - Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu código, explicando o que faz cada uma das linhas.
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int verificar(const void *a, const void *b){
+   return ( *(int*)a - *(int*)b ); //a função vai fazer uma verificação da diferença de dois números. Caso, o resultado for positivo, significa que a>b, caso for negativo então a<b e, por fim, se for igual a 0 eles são iguais
+} 
+int main(){
+   int num, i; //declaração do tamanho do vetor e de i
+   float *vetor; //determinação do tipo do ponteiro vetor
+ 
+   printf("Informe o tamanho do vetor: ");
+   scanf("%d", &num);//o programa está recebendo o tamanho do vetor
+ 
+   vetor = malloc(num * sizeof(float));//alocação da memória para o vetor
+ 
+   if(vetor){
+       for(i = 0; i < num; i++){
+          printf("Digite número: ");
+           scanf("%f", (vetor + i));//ocupando as posições do vetor
+       }
+ 
+       qsort(vetor, num, sizeof(float), verificar);//chamando a função qsort, que vai realizar a verificação e comparação entre os números e ordena-los de maneira crescente 
+ 
+       for(i = 0; i < num; i++){
+           printf("%f ", *(vetor + i));// imprimindo os valores do vetor na ordem crescente  
+       }
+     
+   }
+   free(vetor);//liberando a memória 
+   return 0;
+}
