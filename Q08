@@ -1,0 +1,21 @@
+Questão 08 - O que fazem os seguintes programas em C?
+
+int main(){
+ 		int vet[] = {4,9,13};
+  		int i;
+  		for(i=0;i<3;i++){
+  			printf("%d ",*(vet+i));
+  		}
+}
+
+	Nesse primeiro programa, a partir de um laço de repetição, serão percorridos as posições do vetor e impressos os respectivos valores (4,9,13), para cada posição do vetor.
+
+int main(){
+ 	int vet[] = {4,9,13};
+  	int i;
+  	for(i=0;i<3;i++){
+  		printf("%X ",vet+i);
+  	}
+}
+
+Neste caso, serão impressos os endereços de mémoria onde estão sendo guardadas cada vetor.
