@@ -1,0 +1,5 @@
+Questão 07 - Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.
+	p = mat + 1 - Válida, pois o ponteiro está recebendo o valor de mat mais o incremento de 1, ou seja a posição seguinte a mat[4].
+p = mat++ - Inválida, haja vista que o ponteiro não pode receber incremento direto.
+p = ++mat; - Inválida, pelo mesmo motivo do item anterior.
+x = (*mat)++; Válida, porque x irá obter o valor de mat.
