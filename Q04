@@ -1,0 +1,93 @@
+Questão 04 -  Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+	
+	/* (a) */
+  	valor = 10; 	
+  	p1 = &valor; 	
+ 	*p1 = 20; 			
+ 	printf("%d \n", valor);
+
+a) A resposta foi a esperada (20, no caso), uma vez que através do uso do ponteiro “*p1” o inteiro guardado na variável “ valor” é atualizado. Dessa maneira, como o ponteiro está salvando a variável, quando se atribui outro número a esse ponteiro o valor desse dado muda. 
+
+	   /* (b) */
+ 	temp = 26.5;
+  	p2 = &temp;
+  	*p2 = 29.0;
+  	printf("%.1f \n", temp);
+
+b) Tal como o item anterior, o ponteiro “*p” atualizará o valor da variável “temp”, trocando-se 26,5 por 29,0, como era esperado.
+
+	  /* (c) */
+  	p3 = &nome[0];
+  	aux = *p3;
+  	printf("%c \n", aux);
+
+c) Nesse caso, com auxílio do ponteiro “*p3” e do termo auxiliar “aux”, que, respectivamente, guardou e coletou o valor correspondente ao endereço, foi impresso o string 0 do “nome”, que, no caso, corresponde a “P”,que era o resultado esperado.
+
+	  /* (d) */
+  	p3 = &nome[4];
+  	aux = *p3;
+  	printf("%c \n", aux);
+
+d) Semelhante ao item anterior, através do ponteiro e do auxiliar, coleta-se o termo que está guardado no string de configuração 4 do “nome”, que condiz com o carácter “e”.
+
+	/* (e) */
+ 	p3 = nome;
+  	printf("%c \n", *p3);
+
+e) Neste item, com ajuda do ponteiro “p3”, realizou- se a leitura do primeiro string (0) do termo “nome”, que para a palavra utilizada “Ponteiro”, equivale ao char “P”.
+
+	  /* (f) */
+  	p3 = p3 +4;
+  	printf("%c \n", *p3);
+
+f) Nesta questão, ocorrerá uma mudança do posicionamento da string a partir da implementação de bytes, que como resultado imprimirá o carácter ‘e’ que está situado no string 4, haja vista que antes de acontecer a navegação entre as posições o ponteiro estava na posição do primeiro string.
+
+	/* (g) */
+  	p3--;
+ 	printf("%c \n", *p3);
+
+g) Neste item, ao contrário do anterior, ocorre o decréscimo de bytes, então como estava na posição ‘e’ retorna uma posição no string, por isso foi impresso a letra ‘t’ que ocupa a string de valor 3.
+
+	 /* (h) */
+  vetor[0] = 31;
+  vetor[1] = 45;
+  vetor[2] = 27;
+  p4 = vetor;
+  idade = *p4;
+  printf("%d \n", idade);
+
+h) Nesta questão é realizada a implementação de vetor e, como não é especificada nenhum local, ao guardar a variável no ponteiro “p4”, o mesmo é inicializado na posição 0, por essa razão o código retorna o valor 31, que corresponde ao vetor[0].
+
+	/* (i) */
+  	p5 = p4 +1;
+  	idade = *p5;
+  	printf("%d \n", idade);
+
+i) Tal como questões anteriores, nesse ponto, ocorrerá a implantação de bytes. Dessa forma, quando se acrescenta uma posição ao vetor, o ponteiro “p5” vai corresponder ao vetor[1] e, consequentemente, a variável “idade” vai responder o valor que está guardado nesse vetor, que é 45.
+
+	/* (j) */
+  	p4 = p5 +1;
+  	idade = *p4;
+  	printf("%d \n", idade);
+
+j) Seguindo a mesma lógica, o ponteiro “p4” agora vai guardar o valor do ponteiro “p5” mais o incremento de um  byte. Assim, como no “p5” está  armazenando o vetor[1],  com o acréscimo de posição o “p4” vai refletir o veto[2], que vale 27.
+
+	/* (l) */
+  	p4 = p4 -2;
+  	idade = *p4;
+  	printf("%d \n", idade);
+
+l) Neste caso, com o decréscimo de bytes, o ponteiro “p4” que estava guardando o valor do vetor[2], vai voltar a armazenar o inteiro referente ao vetor[0], que corresponde a 31.
+
+	 /* (m) */
+ 	 p5 = &vetor[2] - 1;
+ 	 printf("%d \n", *p5);
+
+m) O ponteiro “p5” agora vai guardar o inteiro correspondente ao decréscimo de um byte do vetor[2], ou seja, o vetor[1], que equivale ao número 45.
+
+	 /* (n) */
+p5++;
+ 	printf("%d \n", *p5);
+  	return(0);
+
+n) Nesta questão, vai ocorrer o aumento de um byte a posição do “p5”, assim ele agora vai guardar o vetor[2] novamente e, por consequência, irá valer 27. 
